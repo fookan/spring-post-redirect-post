@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>サンプルページ</title>
+</head>
+<body>
+  <form method="post" th:action="@{/sample-do}" th:object="${sampleData}">
+    <label>コード</label>
+    <input type="text" th:field="*{code}" />
+    <br/>
+    <button type="submit">決定</button>
+  </form>
+
+  <form method="post" th:action="@{/sample-forward}" th:object="${sampleData}">
+    <label>コード</label>
+    <input type="text" th:field="*{code}" />
+    <br/>
+    <button type="submit">フォワード決定</button>
+  </form>
+
+  <br />
+  <a th:href="@{/}">戻る</a>
+</body>
+</html>
